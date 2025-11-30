@@ -8,6 +8,13 @@
 	vim.g.colors_name = "mytheme"
 
 
+-- buffers
+	local M = {}
+
+	M.view_bg = "#262A2B"  -- color for view mode
+	M.fg = "#FFFFFF"
+
+
 -- winsseparator
 
 	vim.api.nvim_set_hl(0, "WinSeparator", {fg = "#0F0F0F", bg = "NONE", bold = true})
@@ -15,16 +22,16 @@
 -- statusline
 
 	vim.api.nvim_set_hl(0, "StatusLine", { fg = "#FFFFFF", bg = "#0F0F0F", bold = true})
-	vim.api.nvim_set_hl(0, "StatusLineNC", { fg = "#BABABA", bg = "#000000"})
+	vim.api.nvim_set_hl(0, "StatusLineNC", { fg = "#BABABA", bg = "#0F0F0F"})
 
 -- winbar
 
 	vim.api.nvim_set_hl(0, "Winbar", { fg = "#FFFFFF", bg = "#0F0F0F", bold = true})
-	vim.api.nvim_set_hl(0, "WinbarNC", { fg = "#BABABA", bg = "#000000"})
+	vim.api.nvim_set_hl(0, "WinbarNC", { fg = "#BABABA", bg = "#0F0F0F"})
 
 -- basic highlight groups
 
-	vim.api.nvim_set_hl(0, "Normal", { fg = "#ffffff", bg = "#000000" })
+	vim.api.nvim_set_hl(0, "Normal", { fg = "#ffffff", bg = "#0F0F0F" })
 	vim.api.nvim_set_hl(0, "Comment", { fg = "#4B4B4B", italic = true})
 	vim.api.nvim_set_hl(0, "Constant", { fg = "#E8AF89" })
 	vim.api.nvim_set_hl(0, "String", { fg = "#61d1ac" })
@@ -41,3 +48,6 @@
 	vim.api.nvim_set_hl(0, "CursorLine", { bg = "#1E1E1E" })
 	vim.api.nvim_set_hl(0, "Visual", { bg =  "#081818" })
 	vim.api.nvim_set_hl(0, "Namespace", { fg = "#700000"})
+
+
+	return M
