@@ -1,4 +1,3 @@
-
 --~/.config/nvim/init.lua
 
 --Leader key
@@ -8,7 +7,8 @@ vim.g.mapleader = " "
 	vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 	vim.keymap.set("n", "<leader>w", ":w<CR>", { noremap = true, silent = true, desc = "Save file" })
 	vim.keymap.set("n", "<leader>q", ":wq<CR>", { noremap = true, silent = true, desc = "Save & Quit nvim" })
--- Increase Scale
+
+	-- Increase Scale
 	vim.keymap.set("n", "<C-=>", function()
 		vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1 end, {desc = "Zoom In"})
 	-- Decrease Scale
@@ -17,7 +17,6 @@ vim.g.mapleader = " "
 	-- Reset Scale
 	vim.keymap.set("n", "<C-0>", function()
 		vim.g.neovide_scale_factor = 10.0 end, {desc = "Reset Zoom"})
-
  	-- split keybinds
 		vim.keymap.set("n", "<leader>s", ":vsplit<CR>", { noremap = true, silent = true, desc = "vertical split" })
 		vim.keymap.set("n", "<leader>z", ":split<CR>", { noremap = true, silent = true, desc = "horizontal split" })
@@ -54,16 +53,11 @@ vim.g.mapleader = " "
 		vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", { noremap = true, silent = true, desc = "Move line down 1"})
 		vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", { noremap = true, silent = true, desc = "Move line up 1"})
 		vim.keymap.set("n", "<A-J>", "mzgJ`z", { noremap = true, silent = true, desc = "bring next line to cursor"})
-		vim.keymap.set("n", "<A-h>", [[:s/\%#\s\+//<CR>]], { noremap = true, silent = true, desc = "Remove whitespace between cursor and next character"})
-		
 		vim.keymap.set("v", "<Tab>", ">>", { noremap = true , silent = true , desc = "View mode indent"})
-		vim.keymap.set("v", "<S-Tab>", "<<", { noremap = true , silent = true , desc = "View mode revindent"})
+		vim.keymap.set("v", "<S-Tab>", "<", { noremap = true , silent = true , desc = "View mode revindent"})
 
-	--App binds
-		--NERDTree
-		vim.keymap.set('n', '<leader>n', ':NERDTreeToggle<CR>', { noremap = true, silent = true, desc = "nerdtreetoggle" })
-
--- General settings
+--App binds
+	-- General settings
 	vim.opt.number = true
 	vim.opt.relativenumber = true
 	vim.opt.tabstop = 4
@@ -87,9 +81,8 @@ vim.g.mapleader = " "
 		  end,
 		})
 
--- Plugin Management with lazy.nvim
+-- Plugin Management 
 -- ===================================
--- Auto-install lazy.nvim if not installed
 
 	-- Auto-install lazy.nvim
 	local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"

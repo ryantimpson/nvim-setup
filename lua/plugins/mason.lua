@@ -12,9 +12,13 @@ return {
     config = function()
       require("mason-lspconfig").setup({
         ensure_installed = {
-          "lua_ls",
+          "cssls",
+		  "html",
+		  "lua_ls",
           "pyright",
           "clangd",
+		  "jsonls",
+		  "gopls",
         },
         automatic_installation = true,
       })
